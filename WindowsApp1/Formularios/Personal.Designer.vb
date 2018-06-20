@@ -74,6 +74,7 @@ Partial Class Personal
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'ErrorProvider1
@@ -479,7 +480,7 @@ Partial Class Personal
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
-        Me.Button5.Location = New System.Drawing.Point(789, 3)
+        Me.Button5.Location = New System.Drawing.Point(772, 3)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(28, 23)
         Me.Button5.TabIndex = 46
@@ -495,7 +496,7 @@ Partial Class Personal
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
-        Me.Button6.Location = New System.Drawing.Point(817, 3)
+        Me.Button6.Location = New System.Drawing.Point(802, 3)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(28, 23)
         Me.Button6.TabIndex = 45
@@ -504,17 +505,17 @@ Partial Class Personal
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.Button5)
+        Me.Panel3.Controls.Add(Me.Button6)
         Me.Panel3.Location = New System.Drawing.Point(0, -1)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(847, 27)
+        Me.Panel3.Size = New System.Drawing.Size(832, 27)
         Me.Panel3.TabIndex = 49
         '
         'Personal
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
-        Me.ClientSize = New System.Drawing.Size(847, 397)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button6)
+        Me.ClientSize = New System.Drawing.Size(833, 397)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel3)
@@ -538,6 +539,7 @@ Partial Class Personal
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
