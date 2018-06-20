@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85295167-1F75-45CB-8934-23CBB22D9967}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SistemaInventario.My.MyApplication</StartupObject>
+    <RootNamespace>SistemaInventario</RootNamespace>
+    <AssemblyName>SistemaInventario</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SistemaInventario.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SistemaInventario.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_open_box_64_bHt_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.5.6403.13419, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.5.6403.13419\lib\net35-client\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsApp1">
+      <HintPath>obj\Debug\WindowsApp1.exe</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios\Bodega.Designer.vb">
+      <DependentUpon>Bodega.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Bodega.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compra.Designer.vb">
+      <DependentUpon>Compra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Corte.Designer.vb">
+      <DependentUpon>Corte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Corte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Categoria.Designer.vb">
+      <DependentUpon>Categoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Categoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Kardex.Designer.vb">
+      <DependentUpon>Kardex.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Kardex.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mercaderia.Designer.vb">
+      <DependentUpon>Mercaderia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mercaderia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Movimientos.Designer.vb">
+      <DependentUpon>Movimientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Movimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Insumos.Designer.vb">
+      <DependentUpon>Insumos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Insumos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\main.Designer.vb">
+      <DependentUpon>main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modelo.Designer.vb">
+      <DependentUpon>Modelo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modelo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PersonalCorte.Designer.vb">
+      <DependentUpon>PersonalCorte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\PersonalCorte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Provedor.Designer.vb">
+      <DependentUpon>Provedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Provedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Producto.Designer.vb">
+      <DependentUpon>Producto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Producto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Registro.Designer.vb">
+      <DependentUpon>Registro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Registro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Formularios\Personal.Designer.vb">
+      <DependentUpon>Personal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Personal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporte\reporteInsum.Designer.vb">
+      <DependentUpon>reporteInsum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\reporteInsum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\reporteproducto.Designer.vb">
+      <DependentUpon>reporteproducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\reporteproducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\ReporteProductos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteProductos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Formularios\Bodega.resx">
+      <DependentUpon>Bodega.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compra.resx">
+      <DependentUpon>Compra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Corte.resx">
+      <DependentUpon>Corte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Categoria.resx">
+      <DependentUpon>Categoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Kardex.resx">
+      <DependentUpon>Kardex.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mercaderia.resx">
+      <DependentUpon>Mercaderia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Movimientos.resx">
+      <DependentUpon>Movimientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Insumos.resx">
+      <DependentUpon>Insumos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\main.resx">
+      <DependentUpon>main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modelo.resx">
+      <DependentUpon>Modelo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PersonalCorte.resx">
+      <DependentUpon>PersonalCorte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Provedor.resx">
+      <DependentUpon>Provedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Producto.resx">
+      <DependentUpon>Producto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Registro.resx">
+      <DependentUpon>Registro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Personal.resx">
+      <DependentUpon>Personal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\reporteInsum.resx">
+      <DependentUpon>reporteInsum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\reporteproducto.resx">
+      <DependentUpon>reporteproducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\ReporteProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteProductos.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatosPersonal\Conexion_Acceso.vbproj">
+      <Project>{af57d1bc-6646-435a-9c75-a90fc5d6d311}</Project>
+      <Name>Conexion_Acceso</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary2\Negocio.vbproj">
+      <Project>{4cc2522a-267e-467b-8d0e-b38206d37a56}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_open_box_64_bHt_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
