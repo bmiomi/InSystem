@@ -357,24 +357,6 @@ Public Class Personal
         ' btModificar.PerformClick()
     End Sub
 
-
-    'Dim Ctr As Control
-    'For Each Ctr In Me.Controls
-    '    If TypeOf Ctr Is TextBox Then
-    '        'Inicializa los eventos de los TextBox
-    '        AddHandler Ctr.TextChanged, AddressOf AllTextBox_TextChanged
-    '        AddHandler Ctr.Click, AddressOf AllTextBox_Click
-    '    ElseIf TypeOf Ctr Is Label Then
-    '        If Ctr.Tag <> "" Then
-
-    '        End If
-    '        'Inicializa las propiedades de los labels 
-    '        LbGroupe.Add(Ctr, Ctr.Tag)
-    '    End If
-    'Next
-
-
-
     Private Sub RadioButton1__(sender As Object, e As EventArgs) Handles RadioButton1.Click
         If RadioButton1.Checked = True Then
             TextBox2.Enabled = True
@@ -398,6 +380,7 @@ Public Class Personal
             End If
             vistapersonal.dvperso.RowFilter = String.Concat("CONVERT(", filtrado, ",System.String) LIKE '%", TextBox2.Text, "%'")
         Catch ex As NullReferenceException
+            MsgBox(String.Format("No se ha encontrado Resultado sobre {0}", TextBox2.Text))
         End Try
 
     End Sub

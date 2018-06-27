@@ -24,9 +24,6 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.CircularProgressBar1 = New CircularProgressBar.CircularProgressBar()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
@@ -39,6 +36,8 @@ Partial Class Login
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -54,9 +53,8 @@ Partial Class Login
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.RoyalBlue
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button5)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button4)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.CircularProgressBar1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label4)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label3)
         '
         'SplitContainer1.Panel2
         '
@@ -74,58 +72,10 @@ Partial Class Login
         Me.SplitContainer1.SplitterWidth = 1
         Me.SplitContainer1.TabIndex = 2
         '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(93, 226)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 2
-        Me.Button5.Text = "Button5"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(12, 226)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 1
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'CircularProgressBar1
-        '
-        Me.CircularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
-        Me.CircularProgressBar1.AnimationSpeed = 500
-        Me.CircularProgressBar1.BackColor = System.Drawing.Color.Transparent
-        Me.CircularProgressBar1.Font = New System.Drawing.Font("Modern No. 20", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CircularProgressBar1.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.CircularProgressBar1.InnerColor = System.Drawing.Color.White
-        Me.CircularProgressBar1.InnerMargin = -1
-        Me.CircularProgressBar1.InnerWidth = -1
-        Me.CircularProgressBar1.Location = New System.Drawing.Point(0, 20)
-        Me.CircularProgressBar1.MarqueeAnimationSpeed = 2000
-        Me.CircularProgressBar1.Name = "CircularProgressBar1"
-        Me.CircularProgressBar1.OuterColor = System.Drawing.SystemColors.HighlightText
-        Me.CircularProgressBar1.OuterMargin = -25
-        Me.CircularProgressBar1.OuterWidth = 10
-        Me.CircularProgressBar1.ProgressColor = System.Drawing.Color.DodgerBlue
-        Me.CircularProgressBar1.ProgressWidth = 10
-        Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CircularProgressBar1.Size = New System.Drawing.Size(198, 188)
-        Me.CircularProgressBar1.StartAngle = 270
-        Me.CircularProgressBar1.SubscriptColor = System.Drawing.Color.Gold
-        Me.CircularProgressBar1.SubscriptMargin = New System.Windows.Forms.Padding(10, -35, 0, 0)
-        Me.CircularProgressBar1.SubscriptText = ""
-        Me.CircularProgressBar1.SuperscriptColor = System.Drawing.Color.Gold
-        Me.CircularProgressBar1.SuperscriptMargin = New System.Windows.Forms.Padding(10, 35, 0, 0)
-        Me.CircularProgressBar1.SuperscriptText = ""
-        Me.CircularProgressBar1.TabIndex = 0
-        Me.CircularProgressBar1.Text = "Inventario "
-        Me.CircularProgressBar1.TextMargin = New System.Windows.Forms.Padding(8, 8, 0, 0)
-        Me.CircularProgressBar1.Value = 1
-        '
         'Button2
         '
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.Location = New System.Drawing.Point(300, 1)
         Me.Button2.Name = "Button2"
@@ -258,6 +208,30 @@ Partial Class Login
         Me.Button3.TabIndex = 51
         Me.Button3.UseVisualStyleBackColor = False
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label3.Font = New System.Drawing.Font("Kristen ITC", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label3.Location = New System.Drawing.Point(6, 75)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(192, 44)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Inventario"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Label4.Font = New System.Drawing.Font("Kristen ITC", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label4.Location = New System.Drawing.Point(9, 130)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(171, 18)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Marlón Josúe Bernabé"
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -271,6 +245,7 @@ Partial Class Login
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         Me.SplitContainer1.Panel2.PerformLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -292,7 +267,6 @@ Partial Class Login
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents CircularProgressBar1 As CircularProgressBar.CircularProgressBar
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
 End Class

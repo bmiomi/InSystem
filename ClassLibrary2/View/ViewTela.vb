@@ -265,7 +265,7 @@ Public Class ViewTela
 
 
     Public _pruevas As New DataTable
-
+    Public _dataview As DataView
     Public Sub Prueva()
 
         '   Dim resultado As Integer
@@ -273,11 +273,14 @@ Public Class ViewTela
             conectar.Conex_Global()
             adaptador.SelectCommand = New MySqlCommand("SELECT * FROM  provedor ", conectar._conexion)
             adaptador.Fill(_pruevas)
+
+            _dataview = New DataView(_pruevas)
+
             conectar._conexion.Open()
             adaptador.SelectCommand.Connection = conectar._conexion
             adaptador.SelectCommand.ExecuteNonQuery()
         Catch ex As MySqlException
-            MsgBox(ex.Message)
+            MsgBox("Error al ejecutar la peticion" + ex.Message)
         Finally
             conectar.Cerrar()
         End Try

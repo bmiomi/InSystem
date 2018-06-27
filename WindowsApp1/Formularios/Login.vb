@@ -11,9 +11,6 @@ Public Class Login
     Dim drag As Boolean
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
-
-
         With TextBox1
             .SelectionStart = .TextLength
             .SelectionLength = 0
@@ -82,7 +79,7 @@ Public Class Login
         If drag Then
             With TextBox2
                 If .Text = "Contraseña" And .ForeColor = Color.Gray Then
-                    TextBox1.Select(0, 0)
+                    TextBox2.Select(0, 0)
                 End If
             End With
         End If
@@ -93,6 +90,7 @@ Public Class Login
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged, TextBox2.TextChanged
+
         With TextBox1
             If .Text = "" Then
                 .Text = "Usuario"
@@ -141,34 +139,9 @@ Public Class Login
     End Sub
 
     Dim Intententos As Integer = 0
-    Public xs As String
-
-    Function d()
-        Dim x As Integer
-
-        For x = 0 To 100
-            CircularProgressBar1.Value = x
-        Next
-
-        Return CircularProgressBar1.Value
-    End Function
 
 
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        CircularProgressBar1.AnimationSpeed = 5000
-
-        If CircularProgressBar1.Maximum Then
-            d()
-        End If
-    End Sub
-
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        CircularProgressBar1.Value = 1
-    End Sub
-
-
+    Public xs
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
 
 
@@ -185,8 +158,7 @@ Public Class Login
                     Me.Hide()
 
                 Else
-                    MessageBox.Show(String.Format("Intentos: {0}
-Usuario O Contraseña Invalidos ", Intententos), " Error de Autentificacion", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    MessageBox.Show(String.Format("Intentos: {0} Usuario O Contraseña Invalidos ", Intententos), " Error de Autentificacion", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
                     Intententos += 1
                 End If

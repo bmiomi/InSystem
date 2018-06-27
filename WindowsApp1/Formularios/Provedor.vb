@@ -8,6 +8,33 @@ Public Class Provedor
     Dim view As New ViewTela
 
 
+    Sub Habilitar()
+        TxtNomAlmacen.Enabled = True
+        TxTOrigen.Enabled = True
+        TxTDireccion.Enabled = True
+        TxtConvencional.Enabled = True
+        TxtCelular.Enabled = True
+        TextBox1.Enabled = True
+    End Sub
+    Sub Desahabilitar()
+        TxtNomAlmacen.Enabled = False
+        TxTOrigen.Enabled = False
+        TxtConvencional.Enabled = False
+        TxtCelular.Enabled = False
+        TxTDireccion.Enabled = False
+        TextBox1.Enabled = False
+
+    End Sub
+    Sub Limpiar()
+        TxtCodProvedor.Clear()
+        TxtNomAlmacen.Clear()
+        TxtCelular.Clear()
+        TxTDireccion.Clear()
+        TxTOrigen.Clear()
+        TxtConvencional.Clear()
+        TextBox1.Clear()
+    End Sub
+
     'Validar Objetos 
 
     Private Sub Provedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -15,6 +42,30 @@ Public Class Provedor
 
         datos.CodProvedor = "P000000" & datos.Id_codProvedor 'cod Provedor
         TxtCodProvedor.Text = datos.CodProvedor
+    End Sub
+
+    Private Sub texbox2(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
+        Dim filtrado As String
+
+        'Dim DV As New DataView(view._pruevas)
+
+        Try
+
+            If RadioButton1.Checked Then
+                filtrado = "Ruc"
+            End If
+
+            If RadioButton2.Checked Then
+                filtrado = "N_Almacen"
+            End If
+
+            view._dataview.RowFilter = filtrado + " LIKE '%" + TextBox2.Text + "%'"
+            'DataGridView1.DataSource = Nothing
+            'DataGridView1.DataSource = DV
+        Catch ex As NullReferenceException
+        End Try
+
     End Sub
 
 
@@ -167,34 +218,6 @@ Public Class Provedor
         view.Prueva()
     End Sub
 
-
-    Sub Habilitar()
-        TxtNomAlmacen.Enabled = True
-        TxTOrigen.Enabled = True
-        TxTDireccion.Enabled = True
-        TxtConvencional.Enabled = True
-        TxtCelular.Enabled = True
-        TextBox1.Enabled = True
-    End Sub
-    Sub Desahabilitar()
-        TxtNomAlmacen.Enabled = False
-        TxTOrigen.Enabled = False
-        TxtConvencional.Enabled = False
-        TxtCelular.Enabled = False
-        TxTDireccion.Enabled = False
-        TextBox1.Enabled = False
-
-    End Sub
-    Sub Limpiar()
-        TxtCodProvedor.Clear()
-        TxtNomAlmacen.Clear()
-        TxtCelular.Clear()
-        TxTDireccion.Clear()
-        TxTOrigen.Clear()
-        TxtConvencional.Clear()
-        TextBox1.Clear()
-    End Sub
-
     Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
         Dim renglon As Integer = DataGridView1.CurrentCell.RowIndex
@@ -209,6 +232,7 @@ Public Class Provedor
 
         'btModificar.PerformClick()
     End Sub
+    'splass
     Private Sub splass_Click(sender As Object, e As EventArgs) Handles splass.Click
 
         If splass.Text = ">>" Then
@@ -220,6 +244,7 @@ Public Class Provedor
                 Me.Height += 1
                 GroupBox6.Height += 1
             End While
+            TextBox2.Enabled = True
 
             If Panel2.Height = 319 And Me.Height = 613 And GroupBox6.Height = 347 Then
 
@@ -227,7 +252,7 @@ Public Class Provedor
 
                 DataGridView1.Refresh()
                 view.Prueva()
-                DataGridView1.DataSource = view._pruevas
+                DataGridView1.DataSource = view._dataview
                 TextBox2.CharacterCasing = CharacterCasing.Upper
             End If
 
@@ -240,13 +265,11 @@ Public Class Provedor
             End While
         End If
     End Sub
-
+    'Cerrar
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Close()
-        'Main.Label1.Text = "Home"
+        '  Main.Label1.Text = "Home"
     End Sub
-
-
 
     'validador de Numeros
     Private Sub Ruc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress, TxtCelular.KeyPress, TxtConvencional.KeyPress
@@ -298,11 +321,6 @@ Public Class Provedor
 
         Return valor
     End Function
-
-
-
-
-
 
 
 
@@ -372,7 +390,4 @@ Public Class Provedor
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
 End Class
