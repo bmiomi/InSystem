@@ -504,5 +504,4 @@ Public Class Personal
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-
 End Class

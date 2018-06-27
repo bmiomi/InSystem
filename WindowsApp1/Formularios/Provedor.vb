@@ -48,23 +48,16 @@ Public Class Provedor
 
         Dim filtrado As String
 
-        'Dim DV As New DataView(view._pruevas)
-
-        Try
-
-            If RadioButton1.Checked Then
+        If RadioButton1.Checked Then
                 filtrado = "Ruc"
             End If
 
-            If RadioButton2.Checked Then
-                filtrado = "N_Almacen"
-            End If
+        If RadioButton2.Checked Then
+            filtrado = "N_Almacen"
+        End If
 
-            view._dataview.RowFilter = filtrado + " LIKE '%" + TextBox2.Text + "%'"
-            'DataGridView1.DataSource = Nothing
-            'DataGridView1.DataSource = DV
-        Catch ex As NullReferenceException
-        End Try
+        view._dataview.RowFilter = filtrado + " LIKE '%" + TextBox2.Text + "%'"
+
 
     End Sub
 
@@ -129,7 +122,7 @@ Public Class Provedor
     End Sub
 
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.Validating
 
         If TextBox1.Text.Trim.Length = 0 Then
             ErrorProvider1.SetError(TextBox1, "Ingrese un numero de RUC ")
@@ -187,14 +180,18 @@ Public Class Provedor
     Private Sub Modificar_Click(sender As Object, e As EventArgs) Handles Modificar.Click
 
         If Modificar.Text = "Cancelar" Then
+
             Desahabilitar()
             Modificar.Text = "Modificar"
             Nuevo.Text = "Nuevo"
+
         ElseIf Modificar.Text = "Modificar" Then
+
             splass.PerformClick()
             Habilitar()
             Nuevo.Text = "Cancelar"
             Modificar.Text = "Guardar"
+
         ElseIf Modificar.Text = "Guardar" Then
 
             datos.CodProvedor = TxtCodProvedor.Text
@@ -208,7 +205,7 @@ Public Class Provedor
             If Conexion.Actualizar_dtos_Provedor_(datos) Then
                 MessageBox.Show("los datos han sido Actualizados", "Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Limpiar()
-                ' Desabilitar_Click()
+                Desahabilitar()
                 Modificar.Text = "Modificar"
                 Nuevo.Text = "Nuevo"
             End If
@@ -246,7 +243,7 @@ Public Class Provedor
 
             If Panel2.Height = 319 And Me.Height = 613 And GroupBox6.Height = 347 Then
 
-                'view._pruevas.Clear()
+                view._pruevas.Clear()
                 DataGridView1.Refresh()
                 view.Prueva()
                 DataGridView1.DataSource = view._dataview
