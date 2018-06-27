@@ -2,23 +2,17 @@
 Public Class Registro
 
     Private loginC As New LoginClase
-    Private x As String
     Private datos As New Conexion_Acceso.EnLogin
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        If Not IsNothing(TextBox1.Text) And IsNothing(TextBox3.Text) And IsNothing(TextBox2.Text) Then
-
-            x = TextBox1.Text
-            datos.Usuario = TextBox1.Text
-            datos.Password = TextBox3.Text
-            datos.Cargo = TextBox2.Text
+        If String.IsNullOrEmpty(TextBox1.Text) Or String.IsNullOrEmpty(TextBox2.Text) Or String.IsNullOrEmpty(TextBox3.Text) Then
+            MsgBox("Campos vacios Intente llenandos los Campos.")
+        Else
 
             If loginC.datosregistro(datos) Then
                 MsgBox("Gracias por registrarte en nuestra plataforma", MessageBoxIcon.Information, "Informacion")
             End If
-        Else
-            MsgBox("Campos vacios Intente llenandos los Campos.")
         End If
 
 

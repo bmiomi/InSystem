@@ -9,6 +9,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Conexion_Acceso", "AccesoDa
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Negocio", "ClassLibrary2\Negocio.vbproj", "{4CC2522A-267E-467B-8D0E-B38206D37A56}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup2", "Setup2\Setup2.vdproj", "{65D50127-A77B-40AC-95F3-016F9FF0F3DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,27 +71,20 @@ Global
 		{4CC2522A-267E-467B-8D0E-B38206D37A56}.Release|x64.Build.0 = Release|Any CPU
 		{4CC2522A-267E-467B-8D0E-B38206D37A56}.Release|x86.ActiveCfg = Release|Any CPU
 		{4CC2522A-267E-467B-8D0E-B38206D37A56}.Release|x86.Build.0 = Release|Any CPU
+		{65D50127-A77B-40AC-95F3-016F9FF0F3DE}.Debug|Any CPU.ActiveCfg = Debug
+		{65D50127-A77B-40AC-95F3-016F9FF0F3DE}.Debug|ARM.ActiveCfg = Debug
+		{65D50127-A77B-40AC-95F3-016F9FF0F3DE}.Debug|x64.ActiveCfg = Debug
+		{65D50127-A77B-40AC-95F3-016F9FF0F3DE}.Debug|x86.ActiveCfg = Debug
+		{65D50127-A77B-40AC-95F3-016F9FF0F3DE}.Release|Any CPU.ActiveCfg = Release
+		{65D50127-A77B-40AC-95F3-016F9FF0F3DE}.Release|ARM.ActiveCfg = Release
+		{65D50127-A77B-40AC-95F3-016F9FF0F3DE}.Release|x64.ActiveCfg = Release
+		{65D50127-A77B-40AC-95F3-016F9FF0F3DE}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BECC8FD0-2918-49CA-BC19-1E5C2A6FC654}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://bryanmiomi.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = AccesoDatosPersonal\\Conexion_Acceso.vbproj
-		SccProjectName1 = AccesoDatosPersonal
-		SccLocalPath1 = AccesoDatosPersonal
-		SccProjectUniqueName2 = ClassLibrary2\\Negocio.vbproj
-		SccProjectName2 = ClassLibrary2
-		SccLocalPath2 = ClassLibrary2
-		SccProjectUniqueName3 = WindowsApp1\\Precentacion.vbproj
-		SccProjectName3 = WindowsApp1
-		SccLocalPath3 = WindowsApp1
 	EndGlobalSection
 	GlobalSection(Performance) = preSolution
 		HasPerformanceSessions = true
