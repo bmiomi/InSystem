@@ -16,8 +16,8 @@ Public Class ProcesoProvedor
                                                                         values ( @id_Provedor,@Cod_Provedor,@RUC,@N_Almacen,@Convencional,@Celular,@Direccion,@Origen)", conectar._conexion)
 
             adaptador.InsertCommand.Parameters.Add("@id_Provedor", MySqlDbType.Int64, 11).Value = datos.Id_codProvedor
-            adaptador.InsertCommand.Parameters.Add("@Cod_Provedor", MySqlDbType.String, 11).Value = datos.RUC
-            adaptador.InsertCommand.Parameters.Add("@RUC", MySqlDbType.String, 11).Value = datos.CodProvedor
+            adaptador.InsertCommand.Parameters.Add("@Cod_Provedor", MySqlDbType.String, 11).Value = datos.CodProvedor
+            adaptador.InsertCommand.Parameters.Add("@RUC", MySqlDbType.String, 11).Value = datos.RUC
             adaptador.InsertCommand.Parameters.Add("@N_Almacen", MySqlDbType.String).Value = datos.N_Almacen
             adaptador.InsertCommand.Parameters.Add("@Convencional", MySqlDbType.Int64, 11).Value = datos.Convencional
             adaptador.InsertCommand.Parameters.Add("@Celular", MySqlDbType.Int64).Value = datos.Celular

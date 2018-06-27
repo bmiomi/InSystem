@@ -25,6 +25,7 @@ Partial Class Producto
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Producto))
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.TxT_Categoria = New System.Windows.Forms.ComboBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -62,7 +63,6 @@ Partial Class Producto
         Me.txtcodgotela = New System.Windows.Forms.TextBox()
         Me.txtSubCategoria = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.TxT_Categoria = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -91,6 +91,18 @@ Partial Class Producto
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
+        '
+        'TxT_Categoria
+        '
+        Me.TxT_Categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.TxT_Categoria.Enabled = False
+        Me.TxT_Categoria.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ErrorProvider1.SetIconAlignment(Me.TxT_Categoria, System.Windows.Forms.ErrorIconAlignment.TopRight)
+        Me.TxT_Categoria.ItemHeight = 15
+        Me.TxT_Categoria.Location = New System.Drawing.Point(103, 43)
+        Me.TxT_Categoria.Name = "TxT_Categoria"
+        Me.TxT_Categoria.Size = New System.Drawing.Size(250, 23)
+        Me.TxT_Categoria.TabIndex = 46
         '
         'Button5
         '
@@ -545,18 +557,6 @@ Partial Class Producto
         Me.Button2.TabIndex = 47
         Me.Button2.Text = "Nuevo"
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'TxT_Categoria
-        '
-        Me.TxT_Categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.TxT_Categoria.Enabled = False
-        Me.TxT_Categoria.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ErrorProvider1.SetIconAlignment(Me.TxT_Categoria, System.Windows.Forms.ErrorIconAlignment.TopRight)
-        Me.TxT_Categoria.ItemHeight = 15
-        Me.TxT_Categoria.Location = New System.Drawing.Point(103, 43)
-        Me.TxT_Categoria.Name = "TxT_Categoria"
-        Me.TxT_Categoria.Size = New System.Drawing.Size(250, 23)
-        Me.TxT_Categoria.TabIndex = 46
         '
         'Label8
         '

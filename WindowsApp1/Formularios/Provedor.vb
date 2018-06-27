@@ -186,14 +186,12 @@ Public Class Provedor
     'button Modificar
     Private Sub Modificar_Click(sender As Object, e As EventArgs) Handles Modificar.Click
 
-
-
         If Modificar.Text = "Cancelar" Then
             Desahabilitar()
             Modificar.Text = "Modificar"
             Nuevo.Text = "Nuevo"
         ElseIf Modificar.Text = "Modificar" Then
-            ' Me.Button1.PerformClick()
+            splass.PerformClick()
             Habilitar()
             Nuevo.Text = "Cancelar"
             Modificar.Text = "Guardar"
@@ -215,7 +213,7 @@ Public Class Provedor
                 Nuevo.Text = "Nuevo"
             End If
         End If
-        view.Prueva()
+        'view.Prueva()
     End Sub
 
     Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -230,7 +228,7 @@ Public Class Provedor
         TxTDireccion.Text = Me.DataGridView1.Item(6, renglon).Value()
         TxTOrigen.Text = Me.DataGridView1.Item(7, renglon).Value()
 
-        'btModificar.PerformClick()
+        ' Modificar.PerformClick()
     End Sub
     'splass
     Private Sub splass_Click(sender As Object, e As EventArgs) Handles splass.Click
@@ -248,8 +246,7 @@ Public Class Provedor
 
             If Panel2.Height = 319 And Me.Height = 613 And GroupBox6.Height = 347 Then
 
-                view._pruevas.Clear()
-
+                'view._pruevas.Clear()
                 DataGridView1.Refresh()
                 view.Prueva()
                 DataGridView1.DataSource = view._dataview
